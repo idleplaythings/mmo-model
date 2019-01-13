@@ -1,0 +1,32 @@
+const tileTypes = {
+  WATER: 0,
+  REGULAR: 1,
+  SLOPE_SOUTH: 2,
+  SLOPE_WEST: 3,
+  SLOPE_EAST: 4,
+  SLOPE_NORTH: 5,
+  SLOPE_NORTHWEST: 6,
+  SLOPE_NORTHEAST: 7,
+  SLOPE_SOUTHWEST: 8,
+  SLOPE_SOUTHEAST: 9,
+  SLOPE_NORTHWEST_INVERTED: 10,
+  SLOPE_NORTHEAST_INVERTED: 11,
+  SLOPE_SOUTHWEST_INVERTED: 12,
+  SLOPE_SOUTHEAST_INVERTED: 13
+};
+
+const tilePropTypes = {
+  NONE: 0,
+  CLUTTER: 1,
+  STONE_SMALL: 2,
+  STONE_LARGE: 3,
+  STONE_2X2: 4,
+  STONE_3X3: 5
+};
+
+const tileVisualTypes = {
+  WATER: 0,
+  GRASS: 1
+};
+
+export { tileTypes, tilePropTypes, tileVisualTypes };
