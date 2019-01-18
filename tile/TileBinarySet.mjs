@@ -1,3 +1,5 @@
+import ndarray from "ndarray";
+
 class TileBinarySet {
   constructor(tileList) {
     this.tileList = tileList;
@@ -7,10 +9,8 @@ class TileBinarySet {
 
   zoomTo3(position) {
     this.currentView = this.tileList
-      .hi(position.x - 1, position.y - 1)
-      .lo(this.size - position.x - 2, this.size - position.y - 2);
-
-    console.log(this.currentView.shape);
+      .hi(position.x + 2, position.y + 2)
+      .lo(position.x - 1, position.y - 1);
   }
 
   resetZoom() {
@@ -18,15 +18,19 @@ class TileBinarySet {
   }
 
   getHeight(position) {
-    this.currentView.get(position.x, position.y, 0);
+    return this.currentView.get(position.x, position.y, 0);
   }
 
   getType(position) {
-    this.currentView.get(position.x, position.y, 1);
+    return this.currentView.get(position.x, position.y, 1);
   }
 
   getProp(position) {
-    this.currentView.set(position.x, position.y, 2);
+    return this.currentView.set(position.x, position.y, 2);
+  }
+
+  getVisual(position) {
+    return this.currentView.set(position.x, position.y, 3);
   }
 
   setHeight(position, h) {
@@ -39,6 +43,24 @@ class TileBinarySet {
 
   setProp(position, p) {
     this.currentView.get(position.x, position.y, 2, p);
+  }
+
+  setVisual(position, p) {
+    this.currentView.get(position.x, position.y, 3, p);
+  }
+
+  cloneEmpty() {
+    return new TileBinarySet(
+      ndarray(new Int8Array(this.size * this.size * 4), [
+        this.size,
+        this.size,
+        4
+      ])
+    );
+  }
+
+  getData() {
+    return this.currentView.data;
   }
 }
 

@@ -1,4 +1,4 @@
-const tileTypes = {
+const type = {
   WATER: 0,
   REGULAR: 1,
   SLOPE_SOUTH: 2,
@@ -15,7 +15,7 @@ const tileTypes = {
   SLOPE_SOUTHEAST_INVERTED: 13
 };
 
-const tilePropTypes = {
+const prop = {
   NONE: 0,
   CLUTTER: 1,
   STONE_SMALL: 2,
@@ -24,9 +24,9 @@ const tilePropTypes = {
   STONE_3X3: 5
 };
 
-const tileVisualTypes = {
+const visual = {
   WATER: 0,
   GRASS: 1
 };
 
-export { tileTypes, tilePropTypes, tileVisualTypes };
+export { type, prop, visual };
