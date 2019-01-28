@@ -7,6 +7,12 @@ class TileBinarySet {
     this.currentView = this.tileList;
   }
 
+  zoomToChunk(position, size) {
+    this.currentView = this.tileList
+      .hi(position.x + size, position.y + size)
+      .lo(position.x, position.y);
+  }
+
   zoomTo3(position) {
     this.currentView = this.tileList
       .hi(position.x + 2, position.y + 2)
@@ -26,27 +32,27 @@ class TileBinarySet {
   }
 
   getProp(position) {
-    return this.currentView.set(position.x, position.y, 2);
+    return this.currentView.get(position.x, position.y, 2);
   }
 
   getVisual(position) {
-    return this.currentView.set(position.x, position.y, 3);
+    return this.currentView.get(position.x, position.y, 3);
   }
 
   setHeight(position, h) {
-    this.currentView.get(position.x, position.y, 0, h);
+    this.currentView.set(position.x, position.y, 0, h);
   }
 
   setType(position, t) {
-    this.currentView.get(position.x, position.y, 1, t);
+    this.currentView.set(position.x, position.y, 1, t);
   }
 
   setProp(position, p) {
-    this.currentView.get(position.x, position.y, 2, p);
+    this.currentView.set(position.x, position.y, 2, p);
   }
 
   setVisual(position, p) {
-    this.currentView.get(position.x, position.y, 3, p);
+    this.currentView.set(position.x, position.y, 3, p);
   }
 
   cloneEmpty() {
