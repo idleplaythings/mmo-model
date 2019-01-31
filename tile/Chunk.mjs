@@ -32,7 +32,7 @@ const getChunkPosition = (position, chunkSize) => {
 
 class Chunk {
   constructor(position, size) {
-    this.position = position;
+    this.position = new THREE.Vector3(position.x, position.y);
     this.size = size;
 
     this.lastTouched = Date.now();
