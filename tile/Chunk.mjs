@@ -6,6 +6,11 @@ const getChunkPosition = (position, chunkSize) => {
   let x = null;
   let y = null;
 
+  //position is likely serialized tile. Why am I not using typescript?:P
+  if (Array.isArray(position)) {
+    position = { x: position[0], y: position[1], z: position[2] };
+  }
+
   if (position.x < 0) {
     const mod = position.x % chunkSize;
     if (mod !== 0) {
