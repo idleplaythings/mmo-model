@@ -6,11 +6,6 @@ const getChunkPosition = (position, chunkSize) => {
   let x = null;
   let y = null;
 
-  //position is likely serialized tile. Why am I not using typescript?:P
-  if (Array.isArray(position)) {
-    position = { x: position[0], y: position[1], z: position[2] };
-  }
-
   if (position.x < 0) {
     const mod = position.x % chunkSize;
     if (mod !== 0) {
@@ -37,7 +32,7 @@ const getChunkPosition = (position, chunkSize) => {
 
 class Chunk {
   constructor(position, size) {
-    this.position = new THREE.Vector3(position.x, position.y);
+    this.position = new THREE.Vector3(position.x, position.y, 0);
     this.size = size;
 
     this.lastTouched = Date.now();
