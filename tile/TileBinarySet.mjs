@@ -9,7 +9,7 @@ class TileBinarySet {
 
   zoomToChunk(position, size) {
     this.currentView = this.tileList
-      .hi(position.x + size, position.y + size)
+      .hi(position.x + size + 2, position.y + size + 2)
       .lo(position.x, position.y);
   }
 
@@ -21,6 +21,10 @@ class TileBinarySet {
 
   resetZoom() {
     this.currentView = this.tileList;
+  }
+
+  typeEquals(position, type) {
+    return this.getType(position) === type;
   }
 
   getHeight(position) {
