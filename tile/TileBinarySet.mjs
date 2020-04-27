@@ -64,7 +64,7 @@ class TileBinarySet {
       ndarray(new Int8Array(this.size * this.size * 4), [
         this.size,
         this.size,
-        4
+        4,
       ])
     );
   }

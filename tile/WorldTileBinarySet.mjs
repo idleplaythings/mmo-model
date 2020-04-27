@@ -1,15 +1,10 @@
-import ndarray from "ndarray";
 import TileBinarySet from "./TileBinarySet";
 
 class WorldTileBinarySet extends TileBinarySet {
-  constructor(tileList) {
-    super(tileList);
-  }
-
   translatePosition(position) {
     return {
       x: position.x,
-      y: Math.abs(position.y)
+      y: Math.abs(position.y),
     };
   }
 
