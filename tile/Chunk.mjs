@@ -1,8 +1,15 @@
 import THREE from "three";
+import Vector from "../util/Vector";
 
-const getChunkKey = position => position.x + ":" + position.y;
+export const getChunkWorldPosition = (binaryChunkPosition, chunkPosition) =>
+  new Vector(binaryChunkPosition).add(chunkPosition);
 
-const getChunkPosition = (position, chunkSize) => {
+export const getChunkKey = (position) => position.x + ":" + position.y;
+
+export const getPositionInChunk = (position, chunkSize) =>
+  position.clone().sub(getChunkPosition(position, chunkSize));
+
+export const getChunkPosition = (position, chunkSize) => {
   let x = null;
   let y = null;
 
@@ -89,4 +96,3 @@ class Chunk {
 }
 
 export default Chunk;
-export { getChunkPosition, getChunkKey };
