@@ -1,5 +1,5 @@
 import THREE from "three";
-import Vector from "../util/Vector";
+import Vector from "../util/Vector.mjs";
 
 export const getChunkWorldPosition = (binaryChunkPosition, chunkPosition) =>
   new Vector(binaryChunkPosition).add(chunkPosition);

@@ -1,4 +1,4 @@
-import TileBinarySet from "./TileBinarySet";
+import TileBinarySet from "./TileBinarySet.mjs";
 
 class WorldTileBinarySet extends TileBinarySet {
   translatePosition(position) {
