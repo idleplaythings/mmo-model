@@ -7,11 +7,9 @@ const type = {
 
 const prop = {
   NONE: 0,
-  CLUTTER: 1,
-  STONE_SMALL: 2,
-  STONE_LARGE: 3,
-  STONE_2X2: 4,
-  STONE_3X3: 5,
+  BOULDER: 50,
+  ROCK: 52,
+  PEBBLE: 53,
 };
 
 const visual = {

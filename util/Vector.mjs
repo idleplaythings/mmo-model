@@ -1,4 +1,4 @@
-import * as THREE from "three";
+import THREE from "three";
 
 const helperA = new THREE.Vector3();
 const helperB = new THREE.Vector3();
