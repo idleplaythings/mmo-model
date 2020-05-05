@@ -8,6 +8,7 @@ const type = {
 const prop = {
   NONE: 0,
   BOULDER: 50,
+  BOULDER_SECONDARY: 51,
   ROCK: 52,
   PEBBLE: 53,
 };
@@ -17,6 +18,15 @@ const visual = {
   UNDERWATER: 1,
   BEDROCK: 2,
   BEDROCK_SOIL: 3,
+};
+
+const biome = {
+  NO_BIOME: 0,
+  WATER_DEEP: 1,
+  WATE: 2,
+  BEDROCK: 3,
+  BEDROCK_SOIL: 4,
+  MOUNTAIN: 5,
 };
 
 const slopeTypes = [
@@ -34,4 +44,4 @@ const slopeTypes = [
   type.SLOPE_SOUTHEAST_INVERTED,
 ];
 
-export { type, prop, visual, slopeTypes };
+export { type, prop, visual, slopeTypes, biome };
