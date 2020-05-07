@@ -11,6 +11,7 @@ const prop = {
   BOULDER_SECONDARY: 51,
   ROCK: 52,
   PEBBLE: 53,
+  LEAVES: 100,
 };
 
 const visual = {
@@ -44,4 +45,9 @@ const slopeTypes = [
   type.SLOPE_SOUTHEAST_INVERTED,
 ];
 
-export { type, prop, visual, slopeTypes, biome };
+const movementEffect = {
+  difficult: [prop.ROCK],
+  impassable: [prop.BOULDER, prop.BOULDER_SECONDARY],
+};
+
+export { type, prop, visual, slopeTypes, biome, movementEffect };
