@@ -7,6 +7,7 @@ const type = {
 
 const prop = {
   NONE: 0,
+  DEFAULT_REMOVED: 1,
   BOULDER: 50,
   BOULDER_SECONDARY: 51,
   ROCK: 52,
@@ -30,24 +31,9 @@ const biome = {
   MOUNTAIN: 5,
 };
 
-const slopeTypes = [
-  type.SLOPE_SOUTH,
-  type.SLOPE_WEST,
-  type.SLOPE_EAST,
-  type.SLOPE_NORTH,
-  type.SLOPE_NORTHWEST,
-  type.SLOPE_NORTHEAST,
-  type.SLOPE_SOUTHWEST,
-  type.SLOPE_SOUTHEAST,
-  type.SLOPE_NORTHWEST_INVERTED,
-  type.SLOPE_NORTHEAST_INVERTED,
-  type.SLOPE_SOUTHWEST_INVERTED,
-  type.SLOPE_SOUTHEAST_INVERTED,
-];
-
 const movementEffect = {
   difficult: [prop.ROCK],
   impassable: [prop.BOULDER, prop.BOULDER_SECONDARY],
 };
 
-export { type, prop, visual, slopeTypes, biome, movementEffect };
+export { type, prop, visual, biome, movementEffect };
