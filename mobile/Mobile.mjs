@@ -1,3 +1,5 @@
+import Vector from "../util/Vector.mjs";
+
 class Mobile {
   constructor(id, position = null) {
     this.id = id;
@@ -7,8 +9,12 @@ class Mobile {
   }
 
   setPosition(position) {
-    this.position = position;
+    this.position = new Vector(position);
     return this;
+  }
+
+  getPosition() {
+    return this.position;
   }
 
   serialize() {
