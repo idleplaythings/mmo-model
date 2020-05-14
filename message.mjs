@@ -1,3 +1,1 @@
-export const gameMessages = {
-  OWNED_MOBILES: "ownedMobiles",
-};
+export const MOBILE_SPAWNED = "mobileSpawned";
