@@ -28,8 +28,10 @@ class Mobile {
 
   deserialize(data = {}) {
     this.id = data.id;
-    this.position = data.position;
-    this.nextPosition = data.nextPosition;
+    this.position = data.position ? new Vector(data.position) : new Vector();
+    this.nextPosition = data.nextPosition
+      ? new Vector(data.nextPosition)
+      : null;
     this.nextPositionTime = data.nextPositionTime;
 
     return this;
