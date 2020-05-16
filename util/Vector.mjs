@@ -29,11 +29,7 @@ class Vector {
   }
 
   serialize() {
-    return {
-      x: this.x,
-      y: this.y,
-      z: this.z,
-    };
+    return this.toObject();
   }
 
   setX(x) {
