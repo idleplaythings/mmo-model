@@ -6,7 +6,6 @@ class Mobile {
     this.position = position;
     this.nextPosition = null;
     this.nextPositionTime = null;
-    this.movementSpeed = 500;
   }
 
   setPosition(position) {
