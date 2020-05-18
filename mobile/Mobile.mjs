@@ -8,6 +8,11 @@ class Mobile {
     this.nextPositionTime = null;
   }
 
+  setNextMovement(nextPosition, nextPositionTime) {
+    this.nextPosition = new Vector(nextPosition);
+    this.nextPositionTime = nextPositionTime;
+  }
+
   setPosition(position) {
     this.position = new Vector(position);
     return this;
