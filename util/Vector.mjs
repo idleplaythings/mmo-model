@@ -105,6 +105,10 @@ class Vector {
       return false;
     }
 
+    if (!(vector instanceof Vector)) {
+      vector = new Vector(vector);
+    }
+
     return this.x === vector.x && this.y === vector.y && this.z === vector.z;
   }
 
