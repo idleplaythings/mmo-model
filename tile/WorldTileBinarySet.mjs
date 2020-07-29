@@ -34,7 +34,6 @@ class WorldTileBinarySet extends TileBinarySet {
 
   getProp(position) {
     position = this.translatePosition(position);
-
     return super.getProp(position);
   }
 

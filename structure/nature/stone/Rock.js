@@ -1,14 +1,18 @@
 import Vector from "../../../util/Vector";
 import { getPositionInChunk } from "../../../tile/Chunk.mjs";
 import { prop } from "../../../tile/TileTypes.mjs";
+import Prop from "../../Prop";
+import HarvestableProp from "../../HarvestableProp";
 
 export const ROCKS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-class Rock {
-  constructor({ position = { x: 0, y: 0, z: 0 }, visualType = null } = {}) {
-    this.position = new Vector(position);
+class Rock extends Prop {
+  constructor({ position, visualType = null } = {}) {
+    super(position);
     this.typeId = prop.ROCK;
     this.visualType = visualType;
+
+    this.interactionStrategies.push(new HarvestableProp());
   }
 
   createTiles(
